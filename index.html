@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React Hello World</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+      // Our code will go here
+
+      function App(props) {
+        console.log(props);
+        return <div>{props.children}</div>;
+      }
+
+      // Nested elements inside the App
+      ReactDOM.render(
+        <App className="my-class">
+          <header>
+            <h1>Sally Student: Web Developer</h1>
+          </header>
+          <main>
+            <section>
+              <header>
+                <h2>Education</h2>
+              </header>
+              <p>BS in Computer Science from Ohio State University</p>
+            </section>
+
+            <section>
+              <header>
+                <h2>Employment History</h2>
+              </header>
+              <ul>
+                <li>Company Name: Spotify Technology S.A.</li>
+                <li>Job Title: Junior Developer</li>
+                <li>Dates of Employment: 01/2019 - 07/2019</li>
+                <li>Job Description: Lorem Ipsum</li>
+              </ul>
+              <ul>
+                <li>Company Name: HEB Grocery</li>
+                <li>Job Title: Bakery Associate</li>
+                <li>Dates of Employment: 01/2018 - 12/2018</li>
+                <li>Job Description: Lorem Ipsum</li>
+              </ul>
+            </section>
+          </main>
+          <address>
+            <h3>Contact Info</h3>
+            Sally Student<br></br>
+            <a href="mailto:student_sally@mymail.com">
+              student_sally@mymail.com
+            </a>
+            <br></br>
+            <a href="tel:+1234567890">(123) 456-7890</a>
+            <br></br>
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg"
+              alt="This is me!"
+              width="200px"
+              height="200px"
+            ></img>
+          </address>
+          <footer>© 2017 Sally A. Student</footer>
+        </App>,
+        document.querySelector("body")
+      );
+    </script>
+  </body>
+</html>
